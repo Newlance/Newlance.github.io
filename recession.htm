@@ -1,0 +1,70 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+.pFrame{
+	width:1280px;
+	height:720px!important;
+	background-image:url(USRimg/Slide1.JPG);
+	background-size:cover;
+	border:thick solid #000;
+	
+	margin-left:auto;
+	margin-right:auto;
+}
+.control{
+	margin-top:52%;
+	margin-left:46%;
+}
+</style>
+<script>
+$(document).ready(function(){
+	var i = 1;
+	$('.control #rightArrow').on('click',function()
+	{
+		if(i>=13)
+		{i=1;}
+		else
+		{
+		i++;
+		}
+		$('.pFrame').css('background-image','url(USRimg/Slide' + i + '.JPG)');
+		$('.counter').html(i);
+		
+	});
+		$('.control #leftArrow').on('click',function()
+	{
+		if(i<=1)
+		{i=13;}
+		else
+		{
+		i--;
+		}
+		$('.pFrame').css('background-image','url(USRimg/Slide' + i + '.JPG)');
+		$('.counter').html(i);
+		
+	});
+	//$(this).find('.pFrame').css('background-image','url(USRimg/Slide2.JPG)');
+});
+</script>
+
+</head>
+
+<body>
+<div class="pFrame">
+<div class="control"><img id="leftArrow" src="img/prev.png" height="50px"><span class="counter">1</span> of 13<img id="rightArrow" src="img/next.png" height="50px"></div>
+</div>
+<br><br>
+           <object data="attachments/Recessions.pdf" type="application/pdf" width="100%" height="100%" id="res">
+         
+          <p>It appears you don't have a PDF plugin for this browser.
+          No biggie... you can <a href="attachments/Recessions.pdf">click here to
+          download the PDF file.</a></p>
+          
+        </object>
+
+</body>
+
+</html>

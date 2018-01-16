@@ -1,0 +1,341 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>Database Schema</title>
+<link rel="stylesheet" href="/css/db.css">
+</head>
+<body>
+<table border=1 id="customers">
+<tr><td colspan="6"><h1>Customers</h1></td></tr>
+<tr>
+<td bgcolor=silver class='medium'>Field</td>
+<td bgcolor=silver class='medium'>Type</td>
+<td bgcolor=silver class='medium'>Null</td>
+<td bgcolor=silver class='medium'>Key</td>
+<td bgcolor=silver class='medium'>Default</td>
+<td bgcolor=silver class='medium'>Extra</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Customer_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'>PRI</td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Name_First</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Name_Last</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Phone</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>YES</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>E-Mail</td>
+<td class='normal' valign='top'>varchar(40)</td>
+<td class='normal' valign='top'>YES</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Company</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>YES</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>#ofTransactions</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>#ofServices</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+</table>
+
+<!-- Transactions -->
+<table border=1 id="transactions">
+<tr><td colspan="6"><h1>Transactions</h1></td></tr>
+<tr>
+<td bgcolor=silver class='medium'>Field</td>
+<td bgcolor=silver class='medium'>Type</td>
+<td bgcolor=silver class='medium'>Null</td>
+<td bgcolor=silver class='medium'>Key</td>
+<td bgcolor=silver class='medium'>Default</td>
+<td bgcolor=silver class='medium'>Extra</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Transaction_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'>PRI</td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Customer_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>SubTotal</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Travel_Fee</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Discount</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Total</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Profit</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Date</td>
+<td class='normal' valign='top'>date</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0000-00-00</td>
+<td class='normal' valign='top'></td>
+</tr>
+</table>
+
+
+
+
+
+
+<!--Services Rendered-->
+<table border=1 id="servicesRendered">
+<tr><td colspan="6"><h1>Services Rendered</h1></td></tr>
+<tr>
+<td bgcolor=silver class='medium'>Field</td>
+<td bgcolor=silver class='medium'>Type</td>
+<td bgcolor=silver class='medium'>Null</td>
+<td bgcolor=silver class='medium'>Key</td>
+<td bgcolor=silver class='medium'>Default</td>
+<td bgcolor=silver class='medium'>Extra</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Transaction_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'>PRI</td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Customer_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'>PRI</td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service_Code</td>
+<td class='normal' valign='top'>varchar(2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Resolved</td>
+<td class='normal' valign='top'>varchar(5)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Cost</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service_Discount</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+</table>
+
+
+
+<!--Service_Type-->
+<table border=1 id="serviceType">
+<tr><td colspan="6"><h1>Service Types</h1></td></tr>
+<tr>
+<td bgcolor=silver class='medium'>Field</td>
+<td bgcolor=silver class='medium'>Type</td>
+<td bgcolor=silver class='medium'>Null</td>
+<td bgcolor=silver class='medium'>Key</td>
+<td bgcolor=silver class='medium'>Default</td>
+<td bgcolor=silver class='medium'>Extra</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service_Code</td>
+<td class='normal' valign='top'>varchar(2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'>PRI</td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service_Desc</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+</table>
+
+
+
+
+
+<table border=1 id="services">
+<tr><td colspan="6"><h1>Services Offered</h1></td></tr>
+<tr>
+<td bgcolor=silver class='medium'>Field</td>
+<td bgcolor=silver class='medium'>Type</td>
+<td bgcolor=silver class='medium'>Null</td>
+<td bgcolor=silver class='medium'>Key</td>
+<td bgcolor=silver class='medium'>Default</td>
+<td bgcolor=silver class='medium'>Extra</td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service_ID</td>
+<td class='normal' valign='top'>int(11)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'>PRI</td>
+<td class='normal' valign='top'>0</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Service</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Price</td>
+<td class='normal' valign='top'>double(10,2)</td>
+<td class='normal' valign='top'>NO</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>0.00</td>
+<td class='normal' valign='top'></td>
+</tr>
+
+<tr>
+<td class='normal' valign='top'>Rate</td>
+<td class='normal' valign='top'>varchar(20)</td>
+<td class='normal' valign='top'>YES</td>
+<td class='normal' valign='top'></td>
+<td class='normal' valign='top'>NULL</td>
+<td class='normal' valign='top'></td>
+</tr>
+</table>
+</body></html>

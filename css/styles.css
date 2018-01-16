@@ -1,0 +1,186 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper{
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	left:0;
+	overflow:hidden;
+	}
+body {
+	height:2000px;
+	width:100%;
+	background-color: #FFE;
+	color: #000;
+	margin-left:0;
+	overflow-x:hidden;
+
+}
+nav{
+	
+	color:#FFF;
+	font-weight:bold;
+	font-size:24px;
+	top:160px;
+	left:400px;
+	position:absolute;
+}
+.button{
+	background-color:#000;
+	color:#FFF;
+	height:30px;	
+	width:100%;
+
+}
+
+.button:hover{
+		width:100%;
+	background-color:#FFF;
+	color:#000;
+
+	
+	  -webkit-transition: all .5s ease-in-out;
+  -moz-transition: all .5s ease-in-out;
+  -o-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+.has_sub{
+
+}
+.dropDown{	
+list-style-type:none;
+	background-color:#000;
+	display:none;
+}
+.visuallyhidden{
+	opacity:0!important;	
+	  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.hidden{
+	display:none;
+}
+#resume{
+	height:100%;
+	opacity:1;
+	
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+.current{opacity:1;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#first{
+	-webkit-transition: all 1s ease-in-out;-moz-transition: all 1s ease-in-out;-o-transition: all 1s ease-in-out;transition: all 1s ease-in-out;
+}
+
+header{
+	padding-left:300px;
+	border-bottom-width: 20px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	width:100%;
+	height:192px;
+	
+}
+#navRight{
+	background-color:#000;
+		background-image:url(../img/door.jpg);
+		    background-position: left; 
+	padding-right:20px;
+	margin-right:0;
+	right:0;
+	top:200;
+	width:200px;
+	position:absolute;
+
+
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#navLeft{
+	background-color:#000;
+		background-image:url(../img/door.jpg);
+		    background-attachment:local;
+    background-position: right; 
+	padding-left:20px;
+	margin-left:0;
+	height:100%;
+	left:0;
+	top:0;
+	width:200px;
+	position:relative;
+	float:left;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+#picture1{
+	font-size: 18px;
+	border-right-width: 20px;
+	border-bottom-width: 20px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #000;
+	border-bottom-color: #000;
+	width: auto;
+	height:200px;
+	float:left;
+	position:absolute;
+	top: 0%;
+	left:0%;
+}
+#picture2{
+		border-left-width: 20px;
+	border-bottom-width: 20px;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-left-color: #000;
+	border-bottom-color: #000;
+	width: auto;
+	height:200px;
+	float:right;
+	position:absolute;
+	top: 0%;
+	right:0%;
+}
+
+H1{
+	font-size:72px;
+	border-bottom-width: 5px;
+	border-bottom-style: solid;
+	border-bottom-color:#F00;
+	margin-top:-50px;
+	
+	width:90%;
+
+}
+
+#content{
+
+	height:70%;
+	margin-left:200px;
+	margin-right:200px;
+    
+    padding: 100px;
+
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+footer{
+
+position:absolute;
+left:500px;	
+}
